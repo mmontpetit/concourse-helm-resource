@@ -16,7 +16,7 @@ cat > $payload <&0
 # Prepare
 setup_resource $payload $source
 echo "Resource setup successful."
-env
+echo $payload
 
 # Parse parameters
 namespace=$(jq -r '.source.namespace // "default"' < $payload)
